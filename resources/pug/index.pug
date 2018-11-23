@@ -1,0 +1,144 @@
+extends layout/_default
+
+block title
+	title
+
+
+block content
+	body.main-page
+		include layout/_header
+		.main-content#main-page
+
+			//---
+			section.mp-section.mp-section--header
+				.container
+					.row.page-title.align-items-start._js-animated._js-animated--page-title1
+						.col-xl-6.col-lg-6.col-md-6.page-title__el.page-title__img
+							img(src="img/gold-text.png")
+							img(src="img/gold-number.png")
+						.col-xl-4.col-lg-5.col-md-6.ml-md-auto.page-title__el.page-title__desc.title-desc
+							.title-desc__text Закрытая биржа для авторов информационных статей
+							a(href="/" data-goto=".mp-section.mp-section--now-authors").btn.btn--theme.title-desc__btn Занять место в 1000
+							.title-desc__btn-text Пишите качественные статьи и зарабатывайте больше
+
+			//---
+			section.mp-section.mp-section--about.about-block._js-animated._js-animated--about1
+				.container.about-block__container
+
+					.bg__part.bg__part--left
+						.part__wrapper._js-animated._js-animated--about2
+
+					.bg__part.bg__part--right
+						.part__wrapper._js-animated._js-animated--about3
+
+					.row._js-animated._js-animated--about4
+						.col-xl-5.col-md-6
+							.about-block__title Набираем лучших авторов в золотую
+								span 1000
+
+						.col-xl-5.col-md-6
+							.about-block__text
+								p.
+									Обычная биржа текстов - это борьба за выживание.
+									Некогда писать хорошо: нужно писать быстрее и больше, а качество на втором месте.
+									От этого плохо всем: авторам, заказчикам, посетителям сайта.
+									Давайте вместе менять рунет в лучшую сторону.
+								p.
+									Почему 1000? Мы уверены, что тысячи отличных авторов достаточно, чтобы повлиять на качество статей в рунете.
+									В условиях закрытой биржи вы развиваетесь как автор и зарабатываете больше.
+
+			//---
+			section.mp-section.mp-section--advantages.advantages
+				.container
+					.row.align-items-start.js-waypoint
+						.col-md-4.advantages__el._js-animated._js-animated--advantages1
+							.advantages__box.box
+								.box__title от
+									span#_js-advantages1(data-countup="40")
+									| до
+									span#_js-advantages2(data-countup="69")
+									| руб.
+								.box__text ставка за 1000 зн.
+
+							.advantages__text Мы будем и дальше повышать ставки, чтобы ваша оплата всегда была конкурентной по рынку.
+
+						.col-md-4.advantages__el._js-animated._js-animated--advantages2
+							.advantages__box.box
+								.box__title до
+									span#_js-advantages3(data-countup="15")
+									| %
+								.box__text БОНУС К СТАВКЕ
+
+							.advantages__text Получайте высокие оценки за текст и зарабатывайте бонусы: +5, +10 или +15% к ставке.
+
+						.col-md-4.advantages__el._js-animated._js-animated--advantages3
+							.advantages__box.box
+								.box__title
+									span#_js-advantages4(data-countup="800")
+									| руб.
+								.box__text СРЕДНИЙ ЗАРАБОТОК ЗА ДЕНЬ
+
+							.advantages__text В среднем авторы получают сейчас 48-53 руб. за 1000 знаков.
+
+			//---
+			include main-page/_constructor
+
+			//---
+			section.mp-section.mp-section--how-work.how-work
+				.container
+					.how-work__title._js-animated._js-animated--how-work1
+						img(src="img/how-work.png")
+
+					.row.how-work__list._js-animated
+						.col-lg-3.col-md-6.how-work__el._js-animated._js-animated--how-work3
+							.triangle
+							.text Выбираете заказ и приступаете к работе
+
+						.col-lg-3.col-md-6.how-work__el._js-animated._js-animated--how-work4
+							.triangle
+							.text Пишете текст по ТЗ и сдаете в срок
+
+						.col-lg-3.col-md-6.how-work__el._js-animated._js-animated--how-work5
+							.triangle
+							.text Редактор проверяет текст и принимает его
+
+						.col-lg-3.col-md-6.how-work__el._js-animated._js-animated--how-work6
+							.triangle
+							.text Каждую неделю вы получаете оплату выполненных заказов
+
+			//---
+			include main-page/_steps
+
+			//---
+			section.mp-section.mp-section--work-with-us.work-with-us
+				.container
+					h2.section-title.work-with-us__title._js-animated._js-animated--work-with-us2 Работайте с нами и становитесь успешнее
+					.row.justify-content-center
+						.col-xl-12
+							.work-with-us__wrapper.row.justify-content-sm-center
+								.work-with-us__el.col-lg-4.col-md-6.col-sm-7._js-animated._js-animated--work-with-us3
+									.work-with-us__img.d-flex.justify-content-center.align-items-center
+										img(src="img/work-with-us/1.png")
+									.work-with-us__text Если вам надоело бороться с условиями "вписать 50 ключей в 3000 знаков". Мы ограждаем вас от неадекватных ТЗ и необоснованных претензий.
+
+								.work-with-us__el.col-lg-4.col-md-6.col-sm-7._js-animated._js-animated--work-with-us4
+									.work-with-us__img.d-flex.justify-content-center.align-items-center
+										img(src="img/work-with-us/2.png")
+									.work-with-us__text Если вы знакомы с&nbsp;информационным стилем: пишете без воды, не используете штампы, соблюдаете структуру текста.
+
+								.work-with-us__el.col-lg-4.col-md-6.col-sm-7._js-animated._js-animated--work-with-us5
+									.work-with-us__img.d-flex.justify-content-center.align-items-center
+										img(src="img/work-with-us/3.png")
+									.work-with-us__text Если вы хотите делать что-то качественное для рунета, менять его к лучшему и достойно зарабатывать.
+
+			//---
+			include main-page/_faq
+
+			//---
+			include main-page/_reviews
+
+			//---
+			include main-page/_now
+
+			//---
+			include layout/_footer

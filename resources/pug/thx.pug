@@ -1,0 +1,31 @@
+extends layout/_default
+
+block title
+    title
+
+block content
+    body.inner-page
+        //---
+        include layout/_header
+
+        //---
+        .main-content#thx
+            .container
+                .row.justify-content-center
+                    .col-lg-8
+                        h1 Спасибо! Ваша заявка принята
+                        p Сейчас на вашу почту придет письмо с дальнейшими инструкциями и ссылкой на запись презентации новой биржи.
+                        p
+                            b Перейти на почту:&#32;
+                            a(href="mailto:email@mail.ru") email@mail.ru
+                        br
+                        .announce.announce--theme
+                            p
+                                b Если вы не нашли письмо на почте в течение 5 минут:
+                            p 1. Проверьте папку Спам и переместите письмо во Входящие.
+                            p 2. Письма нет в папке Спам? Напишите об этом на&#32;
+                                a(href="mailto:support@puzat.ru").gray support@puzat.ru
+                                | , и мы решим проблему.
+
+        //---
+        include layout/_footer

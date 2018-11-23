@@ -1,0 +1,38 @@
+@mixin media-notebook-down($name, $breakpoints: $grid-breakpoints) {
+	$max: breakpoint-max($name, $breakpoints);
+	@if $max {
+		@media (max-height: 700px) and (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@media (max-height: 700px) {
+			@content;
+		}
+	}
+}
+
+@mixin media-macbook840-down($name, $breakpoints: $grid-breakpoints) {
+	$max: breakpoint-max($name, $breakpoints);
+	@if $max {
+		@media (max-height: 840px) and (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@media (max-height: 840px) {
+			@content;
+		}
+	}
+}
+
+@mixin media-macbook780-down($name, $breakpoints: $grid-breakpoints) {
+	$max: breakpoint-max($name, $breakpoints);
+	@if $max {
+		@media (max-height: 780px) and (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@media (max-height: 780px) {
+			@content;
+		}
+	}
+}

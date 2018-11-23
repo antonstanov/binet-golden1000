@@ -1,0 +1,52 @@
+.now-authors {
+	overflow: hidden;
+	padding: $inner-lg 0;
+
+	@include media-breakpoint-down(md) {
+		padding: $inner-md 0 ;
+	}
+	&__title {
+		margin-bottom: $inner-lg;
+		@include media-breakpoint-down(md) {
+			margin-bottom: $inner-md;
+		}
+	}
+	.count {
+		margin-bottom: $inner-lg;
+		@include media-breakpoint-down(md) {
+			margin-bottom: $inner-md;
+		}
+		&__number {
+			color: $theme-color;
+			font-family: 'GothaProBlack';
+			font-size: 100px;
+			line-height: 70px;
+			margin-bottom: 20px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		&__number-desc {
+			margin-bottom: 2rem;
+		}
+		&__el {
+			text-align: center;
+		}
+	}
+
+	.form {
+		&__title {
+			line-height: 1.5;
+			text-align: left;
+		}
+		&__text {
+			margin-bottom: $inner-lg;
+			line-height: 1.5;
+			@include media-breakpoint-down(md) {
+				margin-bottom: $inner-md;
+			}
+		}
+		.btn {
+			margin-bottom: $inner-lg * .4;			
+		}
+	}
+}

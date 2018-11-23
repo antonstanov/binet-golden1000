@@ -1,0 +1,107 @@
+.page-title {
+	&__el {
+		margin-bottom: 50px;
+
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 30px;
+		}
+		@include media-macbook840-down(xl) {
+			margin-bottom: 30px;
+		}
+	}
+	&__img {
+		@include media-notebook-down(xl) {
+			padding-top: 10px;
+		}
+		img {
+			max-width: 100%;
+			@include media-notebook-down(xl) {
+				max-width: 90%;
+			}
+			@include media-notebook-down(lg) {
+				max-width: 80%;
+			}
+			@include media-notebook-down(sm) {
+				max-width: 100%
+			}
+			& + img {
+				margin-top: 25px;
+				@include media-notebook-down(xl) {
+					margin-top: 10px;
+				}
+				@include media-breakpoint-down(md) {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+	.title-desc {
+		text-align: center;
+		&__text {
+			font-family: 'GothaProBol';
+			font-size: 18px;
+			line-height: 1.3;
+
+			position: relative;
+
+			margin-bottom: 88px;
+			padding-top: 20px;
+
+			text-align: left;
+			text-transform: uppercase;
+
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 54px;
+			}
+			@include media-breakpoint-down(md) {
+				margin-bottom: 10px;
+				padding-top: 0;
+
+				text-align: right;
+			}
+			@include media-breakpoint-down(sm) {
+				text-align: center;
+			}
+
+			@include media-notebook-down(xl) {
+				margin-bottom: 50px;
+			}
+			@include media-notebook-down(lg) {
+				margin-bottom: 10px;
+			}
+			&:before {
+				position: absolute;
+				bottom: 0;
+				left: -60px;
+
+				display: block;
+
+				width: 10px;
+				height: 60px;
+
+				content: '';
+				transform: skew(-45deg, 0);
+
+				background: $theme-color;
+
+				@include media-breakpoint-down(md) {
+					display: none;
+				}
+			}
+		}
+
+		&__btn {
+			width: 100%;
+			margin-bottom: 5px;
+			&-text {
+				font-size: 14px;
+				line-height: normal;
+
+				max-width: 220px;
+				margin: 0 auto;
+
+				color: $theme-color;
+			}
+		}
+	}
+}

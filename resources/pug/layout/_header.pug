@@ -1,0 +1,35 @@
+header.main-header
+    .container
+        .row.justify-content-between.align-items-center._js-animated._js-animated--header1
+            .main-header__el.col
+                a(href="/").header-logo
+                    span.header-logo__el.header-logo__one-part от&nbsp;создателей
+                    span.header-logo__el.header-logo__two-part CONTENT
+                    span.header-logo__el.header-logo__three-part BINET.__.PRO
+
+            .main-header__el.col
+                .d-flex.justify-content-end.align-items-center
+                    .header-statistics
+                        span.header-statistics__el.header-statistics__one-part Сейчас&nbsp;авторов:
+                        span.header-statistics__el.header-statistics__two-part 159
+                        span.header-statistics__el.header-statistics__three-part Набор&nbsp;открыт
+
+                    .header-login
+                        a(href="#popup--login").popup-with-zoom-anim
+                            span.link-icon
+                                img(src="img/icon--login.png")
+                            span.link-text Войти
+
+    #popup--login.popup.zoom-anim-dialog.mfp-hide
+        .popup__title
+            h1 Авторизация
+        .popup__form.form
+            form(action="#").form
+                .form__field
+                    input(type="text" placeholder="Ваш e-mail" data-inputmask-regex="[0-9A-Za-z!#$@.,%&'*+/=?^_`{|}~\-]*").input--text#popup__input--email
+                .form__field
+                    input(type="password" placeholder="Ваш пароль").input--text#popup__input--password
+                .form__field
+                    a.btn.btn--theme(type="submit" href="#") Войти
+                .form__field
+                    a(href="#").popup__link-recollect Забыли пароль?

@@ -1,0 +1,215 @@
+.constructor {
+	overflow: hidden;
+	padding: $inner-lg 0;
+
+	@include media-breakpoint-down(md) {
+		padding: $inner-md 0 ;
+	}
+
+	&__title {
+		//margin-bottom: 50px;
+		margin-bottom: $inner-lg;
+		@include media-breakpoint-down(md) {
+			margin-bottom: $inner-md;
+		}
+	}
+	&__selection {
+		@include media-breakpoint-down(sm) {
+			text-align: center;
+		}
+	}
+	&__text {
+		font-family: 'GothaProLig';
+		font-size: 16px;
+	}
+	.result {
+		@include media-breakpoint-down(sm) {
+			margin-top: $inner-md;
+		}
+		&__wrapper {
+			padding: 50px;
+
+			border: 1px solid $theme-color;
+			@extend %box-shadow;
+
+			@include media-breakpoint-down(lg) {
+				padding: 30px;
+			}
+			@include media-breakpoint-only(md) {
+				padding: 10px;
+			}
+			@include media-breakpoint-down(sm) {
+				padding: 20px;
+
+				text-align: center;
+			}
+		}
+		&__el {
+			font-family: 'GothaProBol';
+			line-height: normal;
+			text-transform: uppercase;
+			& + .result__el {
+				margin-top: 20px;
+			}
+			.sum {
+				font-size: 48px;
+
+				color: $theme-color;
+
+				@include media-breakpoint-down(md) {
+					font-size: 38px;
+				}
+				& + span {
+					margin-left: 1px;
+
+					color: $theme-color;
+				}
+			}
+		}
+	}
+}
+
+#constructor {
+	//margin: 10px 0 40px;
+	padding: 0 7px;
+	width: 70%;
+	@include media-breakpoint-down(lg) {
+		width: 100%;
+	}
+}
+
+.selection {
+	&__el {
+		@include media-breakpoint-down(sm) {
+			//@extend %mb--d;
+		}
+		& + .selection__el {
+			//@extend %mt--d;
+
+				margin-top: $inner-lg;
+			@include media-breakpoint-down(md) {
+				margin-top: $inner-md;
+			}
+		}
+	}
+	&__title {
+		font-family: 'GothaProBol';
+		font-size: 18px;
+		margin-bottom: 10px;
+		line-height: 1.4;
+
+		text-transform: uppercase;
+	}
+	&__item {
+		font-family: 'GothaProBol';
+		font-size: 18px;
+		color: #000;
+		line-height: 26px;
+		position: relative;
+
+		display: inline-block;
+
+		//margin: 20px 0 50px;
+		padding-left: 40px;
+
+		cursor: pointer;
+		user-select: none;
+		transition: .15s;
+
+		@include media-breakpoint-down(md) {
+			font-size: 16px;
+
+			padding-left: 35px;
+			//margin: 20px 0 40px;
+		}
+		@include media-breakpoint-down(sm) {
+			//margin: 20px 10px;
+		}
+		&:hover {
+			color: $theme-color;
+		}
+		//#constructor__money-rate & {
+			@include media-breakpoint-down(sm) {
+				margin: 10px;
+			}
+		//}
+		& + & {
+			margin-left: 20px;
+
+			@include media-breakpoint-down(md) {
+				margin-left: 10px;
+			}
+		}
+		&:before {
+			position: absolute;
+			left: 0;
+
+			display: block;
+
+			width: 26px;
+			height: 26px;
+
+			content: '';
+
+			border: 1px solid $theme-color;
+			border-radius: 50%;
+		}
+		&.active {
+			&:after {
+				position: absolute;
+				top: 2px;
+				left: 2px;
+
+				display: block;
+
+				width: 22px;
+				height: 22px;
+
+				content: '';
+
+				border: 7px solid #fff;
+				border-radius: 50%;
+				background: $theme-color;
+			}
+		}
+		.number-desc {
+			text-transform: uppercase;
+		}
+	}
+}
+
+.slider-numbers {
+	position: relative;
+
+	height: 30px;
+	&__el {
+		font-family: 'GothaProBol';
+		font-size: 18px;
+
+		position: absolute;
+
+		display: inline-block;
+
+		width: 30px;
+		margin-left: -15px;
+
+		text-align: center;
+		&#slider-numbers__el--1 {
+			left: 0;
+			margin-left: -10px;
+		}
+		&#slider-numbers__el--2 {
+			left: 25%;
+		}
+		&#slider-numbers__el--3 {
+			left: 50%;
+		}
+		&#slider-numbers__el--4 {
+			left: 75%;
+		}
+		&#slider-numbers__el--5 {
+			left: 100%;
+			margin-left: -20px;
+		}
+	}
+}

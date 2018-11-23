@@ -1,0 +1,38 @@
+section.mp-section.mp-section--faq.faq
+    .container
+        .row
+            .faq__el.faq__img.col-md-4._js-animated._js-animated--faq1
+                img(src="img/faq.png")
+            .faq__el.faq__accordion.accordion.col-md-8._js-animated._js-animated--faq2(role='tablist')#faq-accordion
+                .accordion-item
+                    #accordion-item__headingOne.accordion-item__header(role='tab')
+                        h3.accordion-item__title
+                            a(data-toggle='collapse', href='#accordion-item__collapseOne', aria-expanded='true', aria-controls='accordion-item__collapseOne')
+                                .accordion-item__link Как и каким образом производятся выплаты?
+                    #accordion-item__collapseOne.collapse.show(role='tabpanel', aria-labelledby='accordion-item__headingOne', data-parent='#faq-accordion')
+                        .accordion-item__body
+                            | Выплаты производятся еженедельно на рублевый кошелек WebMoney.
+                .accordion-item
+                    #accordion-item__headingTwo.accordion-item__header(role='tab')
+                        h3.accordion-item__title
+                            a.collapsed(data-toggle='collapse', href='#accordion-item__collapseTwo', aria-expanded='false', aria-controls='accordion-item__collapseTwo')
+                                .accordion-item__link Какие требования к уникальности текста?
+                    #accordion-item__collapseTwo.collapse(role='tabpanel', aria-labelledby='accordion-item__headingTwo', data-parent='#faq-accordion')
+                        .accordion-item__body
+                            | Уникальность текста должн быть не менее 70% по text.ru
+                .accordion-item
+                    #accordion-item__headingThree.accordion-item__header(role='tab')
+                        h3.accordion-item__title
+                            a.collapsed(data-toggle='collapse', href='#accordion-item__collapseThree', aria-expanded='false', aria-controls='accordion-item__collapseThree')
+                                .accordion-item__link Сколько времени дается, чтобы написать текст?
+                    #accordion-item__collapseThree.collapse(role='tabpanel', aria-labelledby='accordion-item__headingThree', data-parent='#faq-accordion')
+                        .accordion-item__body
+                            | На любой взятый текст дается 72 часа (трое суток). Если вы не успеете написать текст за отведенное время, то задание будет передано другому автору.
+                .accordion-item
+                    #accordion-item__headingFour.accordion-item__header(role='tab')
+                        h3.accordion-item__title
+                            a.collapsed(data-toggle='collapse', href='#accordion-item__collapseFour', aria-expanded='false', aria-controls='accordion-item__collapseFour')
+                                .accordion-item__link Сколько раз я могу отказываться от взятого задания?
+                    #accordion-item__collapseFour.collapse(role='tabpanel', aria-labelledby='accordion-item__headingFour', data-parent='#faq-accordion')
+                        .accordion-item__body
+                            | Вы можете отказываться от взятого задания один раз в сутки (24 часа). Однако, если у вас есть более 30 оплаченных текстов, вы можете отказываться от задания два раза в сутки.

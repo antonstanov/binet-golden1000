@@ -1,0 +1,102 @@
+@import 'default/variables';
+@import 'default/mixins';
+
+@import 'packages/bootstrap';
+@import 'packages/magnific';
+
+@import 'default/fonts';
+@import 'default/type';
+@import 'default/btn';
+@import 'default/checkbox--custom';
+@import 'default/breakpoints';
+
+@import 'default/popup';
+
+@import 'packages/nouislider';
+@import 'packages/slick';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'pages/main-page/main';
+@import 'pages/thx/main';
+@import 'pages/404/main';
+
+body {
+	&.inner-page {
+		background: #f7f7f7;
+		.main-content {
+			padding: 50px 0;
+			@include media-breakpoint-down(lg) {
+				padding: 20px 00px 30px;
+			}
+		}
+	}
+	&.main-page {
+		.main-content {
+			padding: 0;
+		}
+	}
+	* {
+		outline: none !important;
+	}
+}
+
+.section-title {
+	@include media-breakpoint-down(sm) {
+		font-size: $h1-font-size / 1.5;
+		margin-bottom: $inner-md / 1.5;
+	}
+}
+
+.announce {
+	background: #fff;
+	line-height: normal;
+	padding: 30px 50px;
+	box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+	@include media-breakpoint-down(lg) {
+		padding: 10px 15px;
+	}
+	&--theme {
+		border: 1px solid $theme-color;
+	}
+}
+
+._js-animated {
+	body.main-page & {
+		visibility: hidden;
+	}
+}
+
+%box-shadow {
+	box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.form {
+	&__field {
+		text-align: center;	
+	}
+	&__field + &__field {
+		margin-top: $inner-lg * .4;
+	}
+	.input--text {
+		border: 1px solid #c09955;
+		border-radius: 5px;
+		padding: 15px;
+		text-align: center;
+		width: 100%;
+		&:focus {
+			outline: none;
+		}
+	}
+	.reg_error, .error {
+		color: red;
+		text-align: center;
+		font-size: 13px;
+		line-height: normal;
+		padding: 5px 0;
+	}
+	.btn {
+		width: 100%;
+	}
+}

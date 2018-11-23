@@ -1,0 +1,30 @@
+section.mp-section.mp-section--now-authors.now-authors
+    .container
+        h2.section-title.now-authors__title._js-animated._js-animated--now1 Сейчас в золотой 1000
+        .now-authors__count.count.js-waypoint
+            .count__el.count__number(data-countup="99")#_js-autor__count
+
+            .count__el.count__number-desc Авторов
+
+            h6.count__el.count__msg Набор открыт. Присоединяйтесь!
+
+        .row.justify-content-center
+
+            .now-authors__form.form.col-lg-10
+                .row.justify-content-between
+
+                    .col-xl-5.col-md-6.form__el._js-animated._js-animated--now3
+                        h6.form__title Мeста еще есть! Оставьте свой email, чтобы подать заявку.
+                        .form__text Мы пришлем вам инструкцию о том, как начать работу, а также ссылку на видеопрезентацию новой биржи.
+
+                    .col-xl-5.col-md-6.form__el._js-animated._js-animated--now4
+                        form(action="/thx")
+                            .form__field
+                                input(type="text" placeholder="Ваш e-mail" data-inputmask-regex="[0-9A-Za-z!#$@.,%&'*+/=?^_`{|}~\-]*").input--text#inputmask--email
+                            .form__field
+                                input(disabled="" type="submit" value="Подать заявку").btn.btn-with-checkbox.btn--disabled
+                            .start-checkbox
+                                input(type='checkbox' value='1' onclick="inputLockCheckbox($(this))")#custom-checkbox__now
+                                label(for="custom-checkbox__now")
+                                    span.checkbox__text Я согласен с условиями&#32;
+                                        a(href="#") политики конфиденциальности

@@ -1,0 +1,189 @@
+.reviews {
+	background: #eeeeee;
+	overflow: hidden;
+	padding: $inner-lg 0;
+	transition: .3s;
+	@include media-breakpoint-down(md) {
+		padding: $inner-md 0;
+	}
+	.bg__part {
+		height: 310px;
+
+		position: absolute;
+
+		top: 50%;
+
+		transform: translate(0, -50%);
+		width: 560px;
+		.part__wrapper {
+			background: url('../img/bg-part--white.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 100%;
+			position: absolute;
+			width: 100%;
+			z-index: 1;
+		}
+		&--left {
+			margin-right: -190px;
+			right: 100%;
+		}
+		&--right {
+			left: 100%;
+			margin-left: -150px;
+		}
+	}
+	&__container {
+		position: relative;
+	}
+
+	.title {
+		margin-bottom: $inner-lg;
+		@include media-breakpoint-down(md) {
+			margin-bottom: $inner-md;
+		}
+		&__desc {
+			color: #666666;
+			font-family: 'GothaProLig';
+			font-size: 16px;
+			font-weight: normal;
+			margin-top: 10px;
+
+			text-align: center;
+			text-transform: none;
+		}
+	}
+
+	&__slider {
+		background: #fff;
+		//margin: 25px 0;
+		position: relative;
+		z-index: 1;
+		margin-bottom: $inner-lg;
+
+		.nav {
+			border-bottom: 1px solid #eeeeee;
+			border-top: 7px solid $theme-color;
+			width: 100%;
+			@include media-breakpoint-down(xs) {
+				order: 1;
+			}
+			&__current-slide {
+				display: inline-block;
+				line-height: 30px;
+				text-align: center;
+				width: 130px;
+				@include media-breakpoint-down(sm) {
+					border: 1px solid #eeeeee;
+				}
+			}
+			&__btn {
+				cursor: pointer;				
+				.part__wrapper {
+					background: none;
+					border: 15px solid transparent;
+					height: 15px;
+					padding: 0;
+					width: 15px;
+				}
+				&--next {
+					padding-left: 40px;
+					padding-right: 20px;
+					.part__wrapper {
+						border-left: 15px solid $theme-color;
+						font-size: 0;
+					}
+				}
+				&--prev {
+					padding-left: 20px;
+					padding-right: 40px;
+					.part__wrapper {
+						border-right: 15px solid $theme-color;
+						font-size: 0;
+					}
+				}
+			}
+			&__part {
+				border-left: 1px solid #eeeeee;
+				padding-bottom: 25px;
+				padding-top: 25px;
+				@include media-breakpoint-down(sm) {
+					border: none;
+					padding-bottom: 20px;
+					padding-top: 20px;
+				}
+			}
+		}
+		.slick-dots {
+			@include media-breakpoint-down(xs) {
+				margin-top: 110px;
+				top: 100%;
+			}
+		}
+	}
+}
+
+.slider {
+
+	&__wrapper {
+		padding: 30px 50px 50px;
+		@include media-breakpoint-down(sm) {
+			padding: 20px 30px;
+		}
+		@include media-breakpoint-down(xs) {
+			flex-wrap: wrap;
+		}
+	}
+	.img {
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 20px;
+			text-align: center;
+			width: 100%;
+		}
+		&__wrapper {
+			background: #eee;
+			display: inline-block;
+			height: 160px;
+			overflow: hidden;
+			position: relative;
+			width: 160px;
+		}
+		img {
+			left: 50%;
+			max-width: 300px;
+			min-height: 160px;
+			min-width: 100%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		&__title {
+			font-family: 'GothaProBol';
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+	}
+	&__body {
+		width: 100%;
+
+	}
+	&__content {
+		margin: 10px 0;
+		padding-left: 50px;
+
+		@include media-breakpoint-down(lg) {
+			margin: 0 0 10px;
+			padding-left: 30px;
+		}
+		@include media-breakpoint-down(xs) {
+			padding-left: 0;
+			text-align: center;
+		}
+	}
+	&__title {
+		font-family: 'GothaProMed';
+		font-size: 24px;
+		line-height: 28px;
+		margin: 0 0 10px 0;
+	}
+}

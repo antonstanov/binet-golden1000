@@ -1,0 +1,265 @@
+.steps {
+	background: #eee;
+	overflow: hidden;
+	padding-bottom: $inner-lg;
+	padding-top: $inner-lg;
+	@include media-breakpoint-down(md) {
+		padding-bottom: $inner-md;
+		padding-top: $inner-md;
+	}
+	&__el {
+		& + .steps__el {
+			margin-top: $inner-lg;
+			@include media-breakpoint-only(md) {
+				margin-top: $inner-lg * 0.4;
+			}
+			@include media-breakpoint-down(sm) {
+				margin-top: $inner-md;
+			}
+		}
+
+	}
+
+	&__title {
+		margin-bottom: $inner-lg * 1.5;
+		@include media-breakpoint-down(md) {
+			margin-bottom: $inner-md;
+		}
+	}
+}
+
+.step {
+	position: relative;
+	z-index: 10;
+
+	@include media-breakpoint-down(md) {
+		width: 80%;
+	}
+
+	@include media-breakpoint-down(sm) {
+		width: 100%;
+	}
+
+	& + .step {
+		@include media-breakpoint-down(md) {
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: $inner-md;
+		}
+		@include media-breakpoint-only(md) {
+			margin-top: $inner-lg * 0.8;
+		}
+	}
+
+	&--left {
+		&:before {
+			background: linear-gradient(to right, #f2d378, #9f8644);
+			bottom: 00px;
+			box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, .2);
+
+			content: '';
+
+			display: block;
+			height: 125px;
+
+			position: absolute;
+			right: 220px;
+
+			transform: skew(-40deg);
+			width: 250px;
+
+			@include media-breakpoint-down(lg) {
+				right: 240px;
+			}
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
+		}
+		.pp--sub {
+			height: 150px;
+			right: -80px;
+			top: -25px;
+
+			@include media-breakpoint-down(lg) {
+				right: -60px;
+			}
+			@include media-breakpoint-down(md) {
+				right: -45px;
+				top: -20px;
+			}
+		}
+	}
+
+	&--right {
+		margin-left: -110px;
+		margin-top: 180px;
+
+		@include media-breakpoint-down(lg) {
+			margin-left: -145px;
+		}
+		@include media-breakpoint-down(md) {
+			margin-left: $inner-lg;
+			margin-right: $inner-lg;
+		}
+		&:before,
+		&:after {
+			background: rgba(255, 255, 255, .6);
+
+			box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, .05);
+
+			content: '';
+			display: block;
+
+			height: 70px;
+			position: absolute;
+
+			transform: skew(-40deg);
+			width: 170px;
+
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+		}
+		&:before {
+			left: 195px;
+			top: -125px;
+
+			@include media-breakpoint-down(lg) {
+				left: 210px;
+			}
+			@include media-breakpoint-down(md) {
+				left: 496px;
+				top: -100px;
+			}
+		}
+		&:after {
+			bottom: 80px;
+			left: -200px;
+
+			@include media-breakpoint-down(lg) {
+				left: -185px;
+			}
+			@include media-breakpoint-down(md) {
+				left: -165px;
+			}
+		}
+
+		.pp--sub {
+			height: 95px;
+			left: 65px;
+			top: -25px;
+
+			@include media-breakpoint-down(lg) {
+				left: 85px;
+			}
+			@include media-breakpoint-down(md) {
+				left: 95px;
+				top: -20px;
+			}
+		}
+	}
+}
+
+/*==========================*/
+
+.pp__title {
+	font-family: 'GothaProBol';
+	font-size: 16px;
+
+	margin-bottom: 15px;
+
+	text-align: left;
+	text-transform: uppercase;
+
+	white-space: nowrap;
+
+	@include media-breakpoint-down(lg) {
+		letter-spacing: -.5px;
+	}
+	@include media-breakpoint-down(sm) {
+		white-space: normal;
+	}
+}
+
+/*==========================*/
+
+.pp--main {
+	background: #fff;
+	box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, .02);
+
+	height: 250px;
+	padding: 45px 30px 20px 115px;
+
+	position: relative;
+
+	transform: skew(-40deg);
+	z-index: 1;
+
+	@include media-breakpoint-down(lg) {
+		margin: 0 auto;
+		width: 90%;
+	}
+	@include media-breakpoint-down(sm) {
+		height: auto;
+		padding: 15px 15px 15px 80px;
+		transform: skew(0deg);
+
+		width: 100%;
+	}
+}
+
+.pp--sub {
+	background: linear-gradient(to right, #f2d378, #9f8644);
+
+	box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, .2);
+
+	position: absolute;
+
+	transform: skew(-40deg);
+	width: 50%;
+
+	@include media-breakpoint-down(md) {
+		width: 40%;
+	}
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
+}
+
+.pp__wrapper {
+	height: 180px;
+
+	transform: skew(40deg);
+
+	@include media-breakpoint-down(sm) {
+		height: auto;
+
+		transform: skew(0deg);
+	}
+}
+
+.pp__number {
+	bottom: 15px;
+	color: #eee;
+	font-family: 'GothaProBol';
+	font-size: 100px;
+
+	line-height: 1;
+	margin-right: 20px;
+
+	position: absolute;
+
+	right: 100%;
+
+	@include media-breakpoint-down(sm) {
+		bottom: auto;
+
+		font-size: 70px;
+		margin: 0;
+
+		text-align: center;
+		top: 15px;
+
+		width: 80px;
+	}
+}

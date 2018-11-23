@@ -1,0 +1,47 @@
+@mixin bp($class) {
+	@if $class==xs-m {
+		@media (max-width: 767px) {
+			@content;
+		}
+	} @else if $class==sm {
+		@media (min-width: 768px) {
+			@content;
+		}
+	} @else if $class==sm-m {
+		@media (max-width: 991px) {
+			@content;
+		}
+	} @else if $class==md {
+		@media (min-width: 992px) {
+			@content;
+		}
+	} @else if $class==md-m {
+		@media (max-width: 1199px) {
+			@content;
+		}
+	} @else if $class==lg {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	} @else if $class==sm-md {
+		@media (min-width: 768px) and (max-width: 991px) {
+			@content;
+		}
+	} @else if $class==md-lg {
+		@media (min-width: 992px) and (max-width: 1199px) {
+			@content;
+		}
+	} @else if $class==sm-lg {
+		@media (min-width: 768px) and (max-width: 1199px) {
+			@content;
+		}
+	} @else {
+		@warn 'bp mixin supports: xs-m, sm, sm-m, md, md-m, lg, sm-md, md-lg, sm-lg';
+	}
+}
+
+@mixin mobMenuOn($val) {
+	@media (min-width: $val) {
+		@content;
+	}
+}

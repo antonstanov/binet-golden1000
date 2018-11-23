@@ -1,0 +1,57 @@
+mixin step-left(number, title, text)
+    .step.step--left.col-xl-5.col-lg-6._js-animated._js-animated--steps1
+        .pp.pp--main
+            .pp__wrapper
+                .pp__number= number
+                .pp__body
+                    .h3.pp__title= title
+                    p= text
+        .pp.pp--sub
+
+mixin step-right(number, title, text)
+    .step.step--right.col-xl-5.col-lg-6._js-animated._js-animated--steps2
+
+        .pp.pp--main
+            .pp__wrapper
+                .pp__number= number
+                .pp__body
+                    h3.pp__title= title
+                    p= text
+        .pp.pp--sub
+
+section.mp-section.mp-section--steps.steps
+    .container
+        h2.section-title.steps__title._js-animated._js-animated--steps3 ПИШИТЕ И НЕ ДУМАЙТЕ О ЛИШНЕМ
+        .steps__el.row.justify-content-center
+            +step-left(
+                1,
+                'Не нужно общаться с заказчиками',
+                'Вы не тратите время на поиск свободных заданий и переписку с заказчиками, вы просто выбираете задание из числа свободных и приступаете к работе.'
+            )
+            +step-right(
+                2,
+                'Без конкуренции и поиска заказов',
+                'Биржа готова обеспечить работой 1000 авторов, поэтому вам не нужно будет соревноваться с другими исполнителями.'
+            )
+        .steps__el.row.justify-content-center
+            +step-left(
+                3,
+                'Бонусы за качественную работу',
+                'Получайте высокие оценки за статьи и зарабатывайте больше. С максимальным бонусом ваша ставка составит 69 руб./1000 зн.'
+            )
+            +step-right(
+                4,
+                'Никаких комиссий',
+                'Берем на себя даже 0,8%, которые требует WebMoney за вывод денег. В будущем добавим вывод заработка на банковскую карту.'
+            )
+        .steps__el.row.justify-content-center
+            +step-left(
+                5,
+                'Встроенная проверка текста',
+                'Вы проверяете статьи на уникальность, грамматику, информационный стиль, вхождения ключевых слов, не покидая страницы биржи.'
+            )
+            +step-right(
+                6,
+                'Обучение для авторов',
+                'Проводим вебинары, чтобы вы повышали уровень мастерства и получали больше дорогих заказов.'
+            )

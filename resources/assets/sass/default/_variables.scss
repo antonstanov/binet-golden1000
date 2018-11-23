@@ -1,0 +1,39 @@
+$theme-color: #c09955 !default;
+
+@function h1($key) {
+	@if map-has-key($h1, $key) {
+		@return map-get($h1, $key);
+	}
+	@warn 'Unknown `#{$key}` in $colors.';
+	@return null;
+}
+
+$h1-font-size: 3.55rem !default;
+$h2-font-size: 2.95rem !default;
+$h3-font-size: 2.35rem !default;
+$h4-font-size: 2.1rem !default;
+$h5-font-size: 1.85rem !default;
+$h6-font-size: 1.6rem !default;
+
+$headers: (
+	h1: (
+		xs: 22px,
+		sm: 34px,
+		md: 46px,
+		lg: 57px
+	),
+	h2: (
+		xs: 18px,
+		sm: 18px,
+		md: 64px,
+		lg: 66px
+	)
+);
+
+@function hz($color-name, $color-variant) {
+	// map inception
+	@return map-get(map-get($headers, $color-name), $color-variant);
+}
+
+$inner-lg: 50px !default;
+$inner-md: 30px !default;

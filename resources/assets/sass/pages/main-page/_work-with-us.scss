@@ -1,0 +1,51 @@
+.work-with-us {
+	background-attachment: fixed;
+	background-color: #182449;
+	background-image: url('../img/_main-page__bg3.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	color: #fff;
+	overflow: hidden;
+	padding: $inner-lg * 2 0;
+
+	@include media-breakpoint-down(lg) {
+		padding: $inner-lg;
+	}
+	@include media-breakpoint-down(md) {
+		padding: $inner-md;
+	}
+	@include media-breakpoint-down(xs) {
+		background-image: none;
+	}
+
+	&__el {
+		padding-right: 50px;
+		@include media-breakpoint-down(lg) {
+			padding-right: 15px;
+		}
+		& + .work-with-us__el {
+			@include media-breakpoint-down(sm) {
+				margin-top: $inner-md;
+			}
+		}
+	}
+	&__title {
+		color: #fff;
+		margin-bottom: $inner-lg;
+		text-transform: uppercase;
+		@include media-breakpoint-down(md) {
+			margin-bottom: $inner-md;
+		}
+	}
+	&__img {
+		height: 100px;
+		margin-bottom: $inner-md;
+
+		text-align: center;
+	}
+	&__wrapper {
+		overflow: hidden;
+	}
+}

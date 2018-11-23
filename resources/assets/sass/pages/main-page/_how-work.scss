@@ -1,0 +1,77 @@
+.how-work {
+
+	padding: $inner-lg 0;
+
+	@include media-breakpoint-down(md) {
+		padding: $inner-md 0 ;
+	}
+	&__title {
+
+		margin-bottom: $inner-lg;
+		//@include media-breakpoint-down(md) {
+		//	margin-bottom: $inner-md;
+		//}
+		img {
+			max-width: 100%;
+		}
+	}
+	&__list {
+		padding-left: 15px;
+
+		@include media-breakpoint-down(md) {
+		}
+	}
+	&__el {
+		font-family: 'GothaProBol';
+
+		min-height: 60px;
+
+		overflow: hidden;
+		padding-left: 0;
+		//margin-bottom: 20px;
+		position: relative;
+
+		text-transform: uppercase;
+
+		@include media-breakpoint-down(sm) {
+			padding-left: 45px;
+		}
+		& + .how-work__el {
+			padding-left: 45px;
+			.triangle {
+				display: inline-block;
+			}
+		}
+	}
+	.triangle {
+		background: linear-gradient(to right, #f2d378, #d3b764);
+		display: none;
+		height: 38px;
+
+		left: -20px;
+
+		position: absolute;
+		top: 10px;
+
+		transform: rotate(45deg);
+		width: 38px;
+
+		@include media-breakpoint-down(md) {
+			height: 34px;
+			left: -17px;
+
+			top: 12px;
+			width: 34px;
+		}
+		@include media-breakpoint-down(sm) {
+			display: inline-block;
+		}
+	}
+	.text {
+		letter-spacing: -.5px;
+
+		@include media-breakpoint-down(sm) {
+			margin-top: 15px;
+		}
+	}
+}

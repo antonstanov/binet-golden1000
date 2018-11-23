@@ -1,0 +1,64 @@
+.advantages {
+	margin-top: -$inner-lg * 2 / 1.5;
+	padding-bottom: $inner-lg;
+	@include media-breakpoint-down(md) {
+		margin-top: 0;
+		padding-top: $inner-md;
+		padding-bottom: $inner-md;
+	}
+	&__el {
+		& + .advantages__el {
+			@include media-breakpoint-down(sm) {
+				margin-top: $inner-md;
+			}
+		}
+	}
+	.box {
+		border: 1px solid $theme-color;
+		padding: 40px 30px;
+		text-align: center;
+		min-height: 200px;
+		background: #fff;
+		margin-bottom: 10px;
+		@extend %box-shadow;
+		@include media-breakpoint-down(lg) {
+			padding: 30px 10px;
+			min-height: 180px;
+		}
+		@include media-breakpoint-down(md) {
+			min-height: 150px;
+		}
+		@include media-breakpoint-down(sm) {
+			min-height: auto;
+		}
+		&__title {
+			color: $theme-color;
+			font-family: 'GothaProBol';
+			margin-bottom: 10px;
+			span {
+				font-size: 48px;
+				line-height: 1;
+				font-family: 'GothaProBlack';
+				margin: 0 5px;
+				@include media-breakpoint-down(md) {
+					font-size: 28px;
+				}
+			}
+		}
+		&__text {
+			text-transform: uppercase;
+			font-family: 'GothaProBol';
+			font-size: 18px;
+			letter-spacing: -.5px;
+			@include media-breakpoint-down(md) {
+				font-size: 16px;
+			}
+		}
+	}
+	&__text {
+		color: #666666;
+		font-size: 16px;
+		font-family: 'GothaProLig';
+	}
+
+}

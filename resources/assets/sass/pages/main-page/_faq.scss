@@ -1,0 +1,84 @@
+.faq {
+    padding: $inner-lg 0;
+	&__el {
+    	padding-top: $inner-lg;
+    	padding-bottom: $inner-lg;
+        @include media-breakpoint-down(md) {
+	    	padding-top: $inner-md;
+	    	padding-bottom: $inner-md;
+		}
+	}
+    &__img {
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+        @include media-breakpoint-down(sm) {
+			margin-bottom: $inner-md;
+        }
+		@include media-breakpoint-down(xs) {
+			padding: 0;
+			margin: 0;
+        }
+    }
+}
+
+.accordion-item {
+	& + .accordion-item {
+		margin-top: 20px;
+	}
+	&__header {
+		position: relative;
+		a {
+			font-family: 'GothaProBol';
+			font-size: 16px;
+
+			transition: color .2s;
+			text-transform: uppercase;
+
+			color: #000;
+			&:hover {
+				color: $theme-color;
+			}
+		}
+	}
+	&__body {
+		padding-top: 10px;
+	}
+	&__title {
+		line-height: 26px;
+		margin: 0;
+		color: #000;
+		&:hover {
+			color: $theme-color;
+		}
+
+	}
+	&__link {
+		position: relative;
+
+		display: inline-block;
+
+		padding-right: 35px;
+		&:before {
+			position: absolute;
+			top: 50%;
+			right: 0;
+
+			width: 22px;
+			height: 22px;
+
+			content: '';
+			transition: .2s;
+			transform: rotate(0deg) translate(0, -50%);
+
+			border: 11px solid transparent;
+			border-left: 11px solid $theme-color;
+		}
+		.collapsed & {
+			&:before {
+				margin-top: 5.5px;
+				transform: rotate(90deg) translate(-50%, 0);
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+  "name": "gold1000",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.1",
+    "bootstrap": "v4.0.0-beta",
+    "countup.js": "^1.9.3",
+    "inputmask": "^3.3.8",
+    "magnific-popup": "^1.1.0",
+    "nouislider": "^10.1.0",
+    "popper.js": "^1.12.5",
+    "scrollreveal": "^3.3.6",
+    "slick-carousel": "^1.7.1",
+    "waypoints": "^4.0.1"
+  },
+  "devDependencies": {
+    "bower": "^1.8.4",
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "express": "^4.15.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cache": "^0.4.6",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-svg-sprite": "^1.3.7",
+    "gulp-useref": "^3.1.2",
+    "gulp.spritesmith": "^6.5.1",
+    "imagemin-jpegoptim": "^5.1.0",
+    "run-sequence": "^2.1.0"
+  },
+  "scripts": {},
+  "author": "Stanovskiy Anton <antonstanov@gmail.com>",
+  "license": "ISC"
+}

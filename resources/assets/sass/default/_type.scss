@@ -1,0 +1,91 @@
+//@import "../../../../bower_components/bootstrap/scss/bootstrap-grid";
+//
+//html {
+//  font-size: 14px;
+//}
+//
+//@include media-breakpoint-up(sm) {
+//  html {
+//    font-size: 16px;
+//  }
+//}
+//
+//@include media-breakpoint-up(md) {
+//  html {
+//    font-size: 20px;
+//  }
+//}
+//
+//@include media-breakpoint-up(lg) {
+//  html {
+//    font-size: 28px;
+//  }
+//}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'GothaProLig';
+	//font-family: 'GothaProReg';
+	color: #333;
+	line-height: 1.45;
+	::selection {
+		background: #fee8c2;
+	}
+	::-moz-selection {
+		background: #fee8c2;
+	}
+}
+
+* {
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	font-weight: normal;
+	//margin-top: 0;
+	color: #000;
+	@include media-breakpoint-down(md) {
+		line-height: normal;
+	}
+}
+
+h1, h2 {
+	font-family: 'GothaProBlack';
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+h3, h4, h5, h6 {
+	font-family: 'GothaProBol';
+	//margin-bottom: 20px;
+}
+
+h1 {
+	//font-size: 30px;
+}
+
+h2 {
+	//font-size: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: $theme-color;
+	transition: .15s;
+	&.gray {
+		color: #000;
+		border-bottom: 1px solid #ddd;
+	}
+	&:hover {
+		color: lighten($theme-color, 10);
+		text-decoration: none;
+	}
+}
+
+b {
+	font-family: 'GothaProBol';
+}

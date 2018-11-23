@@ -1,0 +1,37 @@
+/*offsets*/
+//@import "../../../../bower_components/bootstrap/scss/bootstrap-grid";
+
+.btn {
+	font-size: 18px;
+	font-family: 'GothaProBlack';
+	text-transform: uppercase;
+	padding: 25px 60px;
+	border-radius: 60px;
+	border: none;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	&[type="submit"] {
+		-webkit-appearance: none;
+		color: #fff !important;
+	}
+	@include media-breakpoint-down(md) {
+		padding: 20px 40px;
+	}
+	@include media-breakpoint-down(xs) {
+		font-size: 16px;
+	}
+
+	&--disabled {
+		background: #999;
+	}
+	&--theme {
+		color: #fff;
+		background: $theme-color;
+		transition: background .15s;
+		&:hover {
+			color: #fff;
+			background: lighten($theme-color, 5);
+		}
+	}
+}
